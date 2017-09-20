@@ -21,7 +21,7 @@ def ready_position(pwm):
 
     :param pwm: Object to control the PWM signal.
     """
-    pwm.start(7.8)
+    pwm.start(7.2)
 
 
 def focus_position(pwm):
@@ -32,7 +32,7 @@ def focus_position(pwm):
 
     :param pwm: Object to control the PWM signal.
     """
-    pwm.start(7.6)
+    pwm.start(7.4)
 
 
 def capture_position(pwm):
@@ -43,7 +43,7 @@ def capture_position(pwm):
 
     :param pwm: Object to control the PWM signal.
     """
-    pwm.start(7.4)
+    pwm.start(8.0)
 
 
 def capture_image(pwm):
@@ -54,9 +54,9 @@ def capture_image(pwm):
     :param pwm: Object to control the PWM signal.
     """
     focus_position(pwm)
-    time.sleep(1)  # Give the camera a second to focus
+    time.sleep(2)  # Give the camera two seconds to focus
     capture_position(pwm)  # Take the shot
-    time.sleep(0.1)  # Give the servo time to move
+    time.sleep(1)  # Give the servo time to move
     ready_position(pwm)  # Reposition the servo so it is not touching the button anymore
 
 
@@ -71,6 +71,7 @@ def main():
     while True:
         time.sleep(delay_time)  # Time between images
         capture_image(pwm)
+
 
 if __name__ == '__main__':
     main()
