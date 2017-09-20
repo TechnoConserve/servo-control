@@ -26,6 +26,7 @@ import sys
 
 import gphoto2 as gp
 
+
 def main():
     logging.basicConfig(
         format='%(levelname)s: %(name)s: %(message)s', level=logging.WARNING)
@@ -46,6 +47,7 @@ def main():
     subprocess.call(['xdg-open', target])
     gp.check_result(gp.gp_camera_exit(camera, context))
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())
