@@ -16,3 +16,7 @@ def capture_image(wait=1800):
 def main():
     while True:
         capture_image()
+
+
+if __name__ == "__main__":
+    main()
