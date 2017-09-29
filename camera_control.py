@@ -9,7 +9,9 @@ def capture_image(wait=1800):
     Alternatively, you could use the --interval flag
     of gphoto2 to control the interval.
     """
+    print('Capturing Image!')
     call(['gphoto2', '--capture-image-and-download', '--force-overwrite'])
+    print('Waiting {} seconds...', wait)
     time.sleep(wait)
 
 
