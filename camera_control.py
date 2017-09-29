@@ -11,7 +11,7 @@ def capture_image(wait=1800):
     """
     print('Capturing Image!')
     call(['gphoto2', '--capture-image-and-download', '--force-overwrite'])
-    print('Waiting {} seconds...', wait)
+    print('Waiting {} seconds...'.format(wait))
     time.sleep(wait)
 
 
