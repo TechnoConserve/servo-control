@@ -1,3 +1,5 @@
+#!/home/pi/venv/servo_env/bin/python
+
 from subprocess import call
 import time
 
