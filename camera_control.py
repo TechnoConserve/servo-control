@@ -12,7 +12,7 @@ def capture_image(count, wait=1800):
     of gphoto2 to control the interval.
     """
     print('Capturing Image!')
-    call(['gphoto2', '--capture-image-and-download', '--filename {}.jpeg'.format(count)])
+    call(['gphoto2', '--capture-image-and-download', '--filename', '{}.jpeg'.format(count)])
     print('Waiting {} seconds...'.format(wait))
     time.sleep(wait)
 
