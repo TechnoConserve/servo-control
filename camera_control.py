@@ -4,9 +4,9 @@ from subprocess import call
 import time
 
 
-def capture_image(count, wait=1800):
+def capture_image(count, wait=900):
     """
-    By default, takes an image every 30 minutes.
+    By default, takes an image every 15 minutes.
 
     Alternatively, you could use the --interval flag
     of gphoto2 to control the interval.
