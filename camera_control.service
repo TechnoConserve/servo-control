@@ -1,0 +1,10 @@
+[Unit]
+Description=Script to initialize time-lapse photography of USB connected camera
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/images
+ExecStart=/home/pi/repo/camera_control.py
+
+[Install]
+WantedBy=multi-user.target
